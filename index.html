@@ -34,9 +34,11 @@
       theme: {
         extend: {
           colors: {
-            primary:  '#1E6BAE',
-            accent:   '#2A8C45',
-            dark:     '#1A1A2E',
+            primary:      '#1E3EAF',
+            'primary-dark': '#162E8A',
+            accent:       '#F5A623',
+            'accent-dark': '#D98B0E',
+            dark:         '#1A1A2E',
           },
           fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
@@ -88,7 +90,7 @@
       ></button>
       <a
         href="tel:0784044747"
-        class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-accent transition-colors"
+        class="bg-accent hover:bg-accent-dark text-dark text-sm font-bold px-4 py-2 transition-colors"
         x-text="t('nav_cta')"
       ></a>
     </div>
@@ -117,72 +119,143 @@
     <a href="#" @click.prevent="scrollTo('contact')"  x-text="t('nav_contact')"></a>
     <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
       <button @click="toggleLang()" class="text-xs font-bold border-2 border-primary text-primary rounded-full px-3 py-1" x-text="lang === 'de' ? '🇮🇹 IT' : '🇩🇪 DE'"></button>
-      <a href="tel:0784044747" class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg" x-text="t('nav_cta')"></a>
+      <a href="tel:0784044747" class="bg-accent hover:bg-accent-dark text-dark text-sm font-bold px-4 py-2 transition-colors" x-text="t('nav_cta')"></a>
     </div>
   </div>
 </header>
 
   <!-- HERO -->
-<section
-  id="hero"
-  class="relative h-screen min-h-[600px] flex items-center justify-center text-center overflow-hidden"
->
-  <div
-    class="absolute inset-0 bg-cover bg-center"
-    style="background-image: url('assets/images/hero.jpg')"
-  ></div>
-  <div class="absolute inset-0 bg-black/55"></div>
-  <div class="relative z-10 px-4 max-w-3xl mx-auto">
-    <h1
-      class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4"
-      x-text="t('hero_title')"
-    ></h1>
-    <p
-      class="text-xl md:text-2xl text-white/80 font-semibold mb-8"
-      x-text="t('hero_subtitle')"
-    ></p>
-    <a
-      href="#"
-      @click.prevent="scrollTo('contact')"
-      class="inline-block bg-primary hover:bg-accent text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
-      x-text="t('hero_cta')"
-    ></a>
+<section id="hero" class="flex flex-col md:flex-row min-h-screen">
+
+  <!-- Sinistra: blu -->
+  <div class="w-full md:w-1/2 bg-primary flex items-center py-28 px-8 md:px-14 lg:px-20">
+    <div class="w-full">
+      <!-- Sottotitolo -->
+      <p class="text-accent font-bold uppercase tracking-widest text-sm mb-4"
+         x-text="t('hero_subtitle')"></p>
+      <!-- Titolo bold -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+          x-text="t('hero_title')"></h1>
+      <!-- CTA buttons -->
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#"
+           @click.prevent="scrollTo('contact')"
+           class="bg-accent hover:bg-accent-dark text-dark font-bold px-8 py-3 transition-colors text-sm"
+           x-text="t('hero_cta')"></a>
+        <a href="tel:0784044747"
+           class="border-2 border-white text-white font-bold px-8 py-3 hover:bg-white hover:text-primary transition-colors text-sm"
+           x-text="t('hero_cta2')"></a>
+      </div>
+      <!-- Stats circles -->
+      <div class="mt-14 flex gap-5 flex-wrap">
+        <div class="border-2 border-white/25 rounded-full w-[90px] h-[90px] flex flex-col items-center justify-center">
+          <span class="text-xl font-bold text-white" x-text="t('hero_stat1_num')"></span>
+          <span class="text-[10px] text-white/60 text-center leading-tight px-1" x-text="t('hero_stat1_lbl')"></span>
+        </div>
+        <div class="border-2 border-white/25 rounded-full w-[90px] h-[90px] flex flex-col items-center justify-center">
+          <span class="text-xl font-bold text-white" x-text="t('hero_stat2_num')"></span>
+          <span class="text-[10px] text-white/60 text-center leading-tight px-1" x-text="t('hero_stat2_lbl')"></span>
+        </div>
+        <div class="border-2 border-white/25 rounded-full w-[90px] h-[90px] flex flex-col items-center justify-center">
+          <span class="text-xl font-bold text-white" x-text="t('hero_stat3_num')"></span>
+          <span class="text-[10px] text-white/60 text-center leading-tight px-1" x-text="t('hero_stat3_lbl')"></span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-    </svg>
+
+  <!-- Destra: immagine -->
+  <div class="w-full md:w-1/2 min-h-[50vh] md:min-h-screen relative">
+    <img
+      src="assets/images/hero.jpg"
+      alt="SFC Maler – Professionelle Malerarbeiten"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
   </div>
+
 </section>
 
   <!-- SERVICES -->
 <section id="services" class="py-20 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
-    <h2
-      class="text-3xl md:text-4xl font-bold text-center text-dark mb-14"
-      x-text="t('services_title')"
-    ></h2>
+    <div class="text-center mb-14">
+      <p class="text-accent font-bold uppercase tracking-widest text-sm mb-2" x-text="t('services_label')"></p>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-dark"
+        x-text="t('services_title')"
+      ></h2>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center group">
-        <div class="text-5xl mb-4">🎨</div>
+      <!-- Pittura interni/esterni: pennello -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all text-center group border-b-4 border-transparent hover:border-accent">
+        <div class="flex justify-center mb-4">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary group-hover:text-accent transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+            </svg>
+          </div>
+        </div>
         <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors" x-text="t('svc1_title')"></h3>
         <p class="text-sm text-gray-500 leading-relaxed" x-text="t('svc1_desc')"></p>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center group">
-        <div class="text-5xl mb-4">💨</div>
+      <!-- Spritzlackierung: fulmine/precisione -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all text-center group border-b-4 border-transparent hover:border-accent">
+        <div class="flex justify-center mb-4">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary group-hover:text-accent transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+            </svg>
+          </div>
+        </div>
         <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors" x-text="t('svc2_title')"></h3>
         <p class="text-sm text-gray-500 leading-relaxed" x-text="t('svc2_desc')"></p>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center group">
-        <div class="text-5xl mb-4">🪚</div>
+      <!-- Gipsarbeiten: livelli/strati -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all text-center group border-b-4 border-transparent hover:border-accent">
+        <div class="flex justify-center mb-4">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary group-hover:text-accent transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+            </svg>
+          </div>
+        </div>
         <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors" x-text="t('svc3_title')"></h3>
         <p class="text-sm text-gray-500 leading-relaxed" x-text="t('svc3_desc')"></p>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center group">
-        <div class="text-5xl mb-4">✨</div>
+      <!-- Dekorative Behandlungen: scintille/stelle -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all text-center group border-b-4 border-transparent hover:border-accent">
+        <div class="flex justify-center mb-4">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary group-hover:text-accent transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+            </svg>
+          </div>
+        </div>
         <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors" x-text="t('svc4_title')"></h3>
         <p class="text-sm text-gray-500 leading-relaxed" x-text="t('svc4_desc')"></p>
       </div>
+    </div>
+  </div>
+</section>
+
+  <!-- STATS BAR -->
+<section class="py-16 bg-primary">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <div>
+      <p class="text-5xl font-extrabold text-white">34</p>
+      <p class="text-sm text-white/60 mt-2 uppercase tracking-wider" x-text="t('stats_projects')"></p>
+    </div>
+    <div class="border-l border-white/15 pl-6 sm:pl-0 sm:border-0">
+      <p class="text-5xl font-extrabold text-white">15+</p>
+      <p class="text-sm text-white/60 mt-2 uppercase tracking-wider" x-text="t('stats_experience')"></p>
+    </div>
+    <div class="border-l border-white/15 pl-6 sm:pl-0 sm:border-0">
+      <p class="text-5xl font-extrabold text-white">5</p>
+      <p class="text-sm text-white/60 mt-2 uppercase tracking-wider" x-text="t('stats_team')"></p>
+    </div>
+    <div class="border-l border-white/15 pl-6 sm:pl-0 sm:border-0">
+      <p class="text-5xl font-extrabold text-white">100+</p>
+      <p class="text-sm text-white/60 mt-2 uppercase tracking-wider" x-text="t('stats_clients')"></p>
     </div>
   </div>
 </section>
@@ -192,6 +265,7 @@
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
+        <p class="text-accent font-bold uppercase tracking-widest text-sm mb-2" x-text="t('about_label')"></p>
         <h2
           class="text-3xl md:text-4xl font-bold text-dark mb-6"
           x-text="t('about_title')"
@@ -201,9 +275,9 @@
           x-text="t('about_text')"
         ></p>
         <div class="flex flex-col gap-3">
-          <span class="inline-flex items-center gap-2 text-base font-semibold text-dark" x-text="t('about_badge1')"></span>
-          <span class="inline-flex items-center gap-2 text-base font-semibold text-dark" x-text="t('about_badge2')"></span>
-          <span class="inline-flex items-center gap-2 text-base font-semibold text-dark" x-text="t('about_badge3')"></span>
+          <span class="inline-flex items-center text-base font-semibold text-dark border-l-4 border-accent pl-3" x-text="t('about_badge1')"></span>
+          <span class="inline-flex items-center text-base font-semibold text-dark border-l-4 border-accent pl-3" x-text="t('about_badge2')"></span>
+          <span class="inline-flex items-center text-base font-semibold text-dark border-l-4 border-accent pl-3" x-text="t('about_badge3')"></span>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-xl">
@@ -220,10 +294,10 @@
   <!-- GALLERY -->
 <section id="gallery" class="py-20 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
-    <h2
-      class="text-3xl md:text-4xl font-bold text-center text-dark mb-14"
-      x-text="t('gallery_title')"
-    ></h2>
+    <div class="text-center mb-14">
+      <p class="text-accent font-bold uppercase tracking-widest text-sm mb-2" x-text="t('gallery_title')"></p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark" x-text="t('gallery_title')"></h2>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow group">
         <img src="assets/images/gallery-1.jpg" alt="Malerarbeiten 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -250,10 +324,10 @@
   <!-- CONTACT -->
 <section id="contact" class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-4">
-    <h2
-      class="text-3xl md:text-4xl font-bold text-center text-dark mb-14"
-      x-text="t('contact_title')"
-    ></h2>
+    <div class="text-center mb-14">
+      <p class="text-accent font-bold uppercase tracking-widest text-sm mb-2" x-text="t('contact_title')"></p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark" x-text="t('contact_title')"></h2>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
       <!-- Form -->
       <form
@@ -266,31 +340,31 @@
           name="name"
           required
           :placeholder="t('form_name')"
-          class="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+          class="border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <input
           type="email"
           name="email"
           required
           :placeholder="t('form_email')"
-          class="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+          class="border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <input
           type="tel"
           name="phone"
           :placeholder="t('form_phone')"
-          class="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+          class="border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <textarea
           name="message"
           rows="5"
           required
           :placeholder="t('form_message')"
-          class="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+          class="border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-none w-full"
         ></textarea>
         <button
           type="submit"
-          class="bg-primary hover:bg-accent text-white font-bold py-3 rounded-xl transition-colors"
+          class="bg-accent hover:bg-accent-dark text-dark font-bold py-3 transition-colors"
           x-text="t('form_submit')"
         ></button>
         <p

@@ -9,11 +9,19 @@ const translations = {
     nav_cta:        "📞 078 404 47 47",
 
     // Hero
-    hero_title:     "Ihr Malerprofi in der ganzen Schweiz",
-    hero_subtitle:  "SFC Maler GmbH – Salvo Catanese",
-    hero_cta:       "Kostenloses Angebot anfragen",
+    hero_title:      "Ihr Malerprofi in der ganzen Schweiz",
+    hero_subtitle:   "SFC Maler GmbH – Salvo Catanese",
+    hero_cta:        "Kostenloses Angebot anfragen",
+    hero_cta2:       "Jetzt anrufen",
+    hero_stat1_num:  "50+",
+    hero_stat1_lbl:  "Experten",
+    hero_stat2_num:  "100+",
+    hero_stat2_lbl:  "Kunden",
+    hero_stat3_num:  "98%",
+    hero_stat3_lbl:  "Zufriedenheit",
 
     // Services
+    services_label: "Unsere Leistungen",
     services_title: "Unsere Dienstleistungen",
     svc1_title:     "Innen- & Aussenmalerarbeiten",
     svc1_desc:      "Professionelle Malerarbeiten für Wohn- und Gewerberäume sowie Fassaden.",
@@ -24,8 +32,15 @@ const translations = {
     svc4_title:     "Dekorative Behandlungen",
     svc4_desc:      "Stucco veneziano, Betonoptik, Kreidefarbe und weitere Spezialeffekte.",
 
+    // Stats bar
+    stats_projects:   "Abgeschl. Projekte",
+    stats_experience: "Jahre Erfahrung",
+    stats_team:       "Teammitglieder",
+    stats_clients:    "Aktive Kunden",
+
     // About
-    about_title:    "Über uns",
+    about_label: "Über uns",
+    about_title: "Über uns",
     about_text:     "Salvo Catanese bringt jahrelange Erfahrung und Schweizer Qualitätsstandards in jeden Auftrag ein. Von der Beratung bis zur Endreinigung – wir begleiten Sie durch das gesamte Projekt mit Zuverlässigkeit, Präzision und Respekt für Ihr Zuhause.",
     about_badge1:   "✅ Qualitätsgarantie",
     about_badge2:   "✅ Sauberkeit garantiert",
@@ -61,11 +76,19 @@ const translations = {
     nav_cta:        "📞 078 404 47 47",
 
     // Hero
-    hero_title:     "Il tuo professionista della pittura in tutta la Svizzera",
-    hero_subtitle:  "SFC Maler GmbH – Salvo Catanese",
-    hero_cta:       "Richiedi un Preventivo Gratuito",
+    hero_title:      "Il tuo professionista della pittura in tutta la Svizzera",
+    hero_subtitle:   "SFC Maler GmbH – Salvo Catanese",
+    hero_cta:        "Richiedi un Preventivo Gratuito",
+    hero_cta2:       "Chiamaci ora",
+    hero_stat1_num:  "50+",
+    hero_stat1_lbl:  "Esperti",
+    hero_stat2_num:  "100+",
+    hero_stat2_lbl:  "Clienti",
+    hero_stat3_num:  "98%",
+    hero_stat3_lbl:  "Soddisfazione",
 
     // Services
+    services_label: "I Nostri Servizi",
     services_title: "I Nostri Servizi",
     svc1_title:     "Pittura Interni ed Esterni",
     svc1_desc:      "Lavori di pittura professionali per ambienti residenziali, commerciali e facciate.",
@@ -76,8 +99,15 @@ const translations = {
     svc4_title:     "Trattamenti Decorativi",
     svc4_desc:      "Stucco veneziano, effetto cemento, chalk paint e altri effetti speciali.",
 
+    // Stats bar
+    stats_projects:   "Progetti Completati",
+    stats_experience: "Anni d'Esperienza",
+    stats_team:       "Membri del Team",
+    stats_clients:    "Clienti Attivi",
+
     // About
-    about_title:    "Chi Siamo",
+    about_label: "Chi siamo",
+    about_title: "Chi Siamo",
     about_text:     "Salvo Catanese porta anni di esperienza e gli standard qualitativi svizzeri in ogni commessa. Dalla consulenza alla pulizia finale, vi accompagniamo attraverso l'intero progetto con affidabilità, precisione e rispetto per la vostra casa.",
     about_badge1:   "✅ Qualità garantita",
     about_badge2:   "✅ Pulizia garantita",
