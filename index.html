@@ -44,6 +44,68 @@
 >
 
   <!-- HEADER -->
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300"
+  :class="{ 'shadow-md': scrolled }"
+>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" @click.prevent="scrollTo('hero')">
+      <img src="assets/logo_nero.jpeg" alt="SFC Maler GmbH Logo" class="h-14 w-auto" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-dark">
+      <a href="#" @click.prevent="scrollTo('services')" class="hover:text-primary transition-colors" x-text="t('nav_services')"></a>
+      <a href="#" @click.prevent="scrollTo('about')"    class="hover:text-primary transition-colors" x-text="t('nav_about')"></a>
+      <a href="#" @click.prevent="scrollTo('gallery')"  class="hover:text-primary transition-colors" x-text="t('nav_gallery')"></a>
+      <a href="#" @click.prevent="scrollTo('contact')"  class="hover:text-primary transition-colors" x-text="t('nav_contact')"></a>
+    </nav>
+
+    <!-- Right: Lang Toggle + CTA -->
+    <div class="hidden md:flex items-center gap-3">
+      <button
+        @click="toggleLang()"
+        class="text-xs font-bold border-2 border-primary text-primary rounded-full px-3 py-1 hover:bg-primary hover:text-white transition-all"
+        x-text="lang === 'de' ? '🇮🇹 IT' : '🇩🇪 DE'"
+      ></button>
+      <a
+        href="tel:0784044747"
+        class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-accent transition-colors"
+        x-text="t('nav_cta')"
+      ></a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button
+      class="md:hidden flex flex-col gap-1.5 p-2"
+      @click="menuOpen = !menuOpen"
+      aria-label="Menu"
+    >
+      <span class="block w-6 h-0.5 bg-dark transition-all" :class="{'rotate-45 translate-y-2': menuOpen}"></span>
+      <span class="block w-6 h-0.5 bg-dark transition-all" :class="{'opacity-0': menuOpen}"></span>
+      <span class="block w-6 h-0.5 bg-dark transition-all" :class="{'-rotate-45 -translate-y-2': menuOpen}"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div
+    x-show="menuOpen"
+    x-transition
+    class="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 text-sm font-semibold"
+  >
+    <a href="#" @click.prevent="scrollTo('services')" x-text="t('nav_services')"></a>
+    <a href="#" @click.prevent="scrollTo('about')"    x-text="t('nav_about')"></a>
+    <a href="#" @click.prevent="scrollTo('gallery')"  x-text="t('nav_gallery')"></a>
+    <a href="#" @click.prevent="scrollTo('contact')"  x-text="t('nav_contact')"></a>
+    <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+      <button @click="toggleLang()" class="text-xs font-bold border-2 border-primary text-primary rounded-full px-3 py-1" x-text="lang === 'de' ? '🇮🇹 IT' : '🇩🇪 DE'"></button>
+      <a href="tel:0784044747" class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg" x-text="t('nav_cta')"></a>
+    </div>
+  </div>
+</header>
+
   <!-- HERO -->
   <!-- SERVICES -->
   <!-- ABOUT -->
