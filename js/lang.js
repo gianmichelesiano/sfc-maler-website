@@ -27,9 +27,9 @@ const translations = {
     // About
     about_title:    "Über uns",
     about_text:     "Salvo Catanese bringt jahrelange Erfahrung und Schweizer Qualitätsstandards in jeden Auftrag ein. Von der Beratung bis zur Endreinigung – wir begleiten Sie durch das gesamte Projekt mit Zuverlässigkeit, Präzision und Respekt für Ihr Zuhause.",
-    badge1:         "✅ Qualitätsgarantie",
-    badge2:         "✅ Sauberkeit garantiert",
-    badge3:         "✅ Premiummaterialien",
+    about_badge1:   "✅ Qualitätsgarantie",
+    about_badge2:   "✅ Sauberkeit garantiert",
+    about_badge3:   "✅ Premiummaterialien",
 
     // Gallery
     gallery_title:  "Unsere Arbeiten",
@@ -77,9 +77,9 @@ const translations = {
     // About
     about_title:    "Chi Siamo",
     about_text:     "Salvo Catanese porta anni di esperienza e gli standard qualitativi svizzeri in ogni commessa. Dalla consulenza alla pulizia finale, vi accompagniamo attraverso l'intero progetto con affidabilità, precisione e rispetto per la vostra casa.",
-    badge1:         "✅ Qualità garantita",
-    badge2:         "✅ Pulizia garantita",
-    badge3:         "✅ Materiali premium",
+    about_badge1:   "✅ Qualità garantita",
+    about_badge2:   "✅ Pulizia garantita",
+    about_badge3:   "✅ Materiali premium",
 
     // Gallery
     gallery_title:  "I Nostri Lavori",
