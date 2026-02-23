@@ -44,6 +44,8 @@ const translations = {
     form_success:   "Vielen Dank! Wir melden uns bald.",
     address_label:  "Adresse",
     phone_label:    "Telefon",
+    whatsapp_label: "WhatsApp",
+    whatsapp_msg:   "Hallo SFC Maler, ich interessiere mich für Ihre Dienste.",
 
     // Footer
     footer_impressum: "Impressum",
@@ -94,6 +96,8 @@ const translations = {
     form_success:   "Grazie! Ti contatteremo presto.",
     address_label:  "Indirizzo",
     phone_label:    "Telefono",
+    whatsapp_label: "WhatsApp",
+    whatsapp_msg:   "Ciao SFC Maler, sono interessato ai vostri servizi.",
 
     // Footer
     footer_impressum: "Impressum",
