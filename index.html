@@ -4,9 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SFC Maler GmbH – Salvo Catanese</title>
+  <meta name="description" content="Ihr Malerprofi in der ganzen Schweiz. SFC Maler GmbH von Salvo Catanese – Qualität, Präzision und Sauberkeit." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:  '#1E6BAE',
+            accent:   '#2A8C45',
+            dark:     '#1A1A2E',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-  <!-- Sito in costruzione / Website in Aufbau -->
-  <!-- Implementation: see docs/plans/2026-02-23-sfc-maler-website-implementation.md -->
+
+<body
+  class="font-sans text-dark bg-white"
+  x-data="sfcApp()"
+  x-init="init()"
+>
+
+  <!-- HEADER -->
+  <!-- HERO -->
+  <!-- SERVICES -->
+  <!-- ABOUT -->
+  <!-- GALLERY -->
+  <!-- CONTACT -->
+  <!-- FOOTER -->
+
+  <!-- Scripts -->
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
