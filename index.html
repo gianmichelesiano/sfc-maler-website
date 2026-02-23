@@ -258,14 +258,9 @@
       <!-- Form -->
       <form
         name="contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
         class="flex flex-col gap-4"
         @submit.prevent="handleSubmit($event)"
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden"><input name="bot-field" /></p>
         <input
           type="text"
           name="name"
