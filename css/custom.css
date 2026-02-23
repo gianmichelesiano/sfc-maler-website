@@ -1,3 +1,5 @@
+/* css/custom.css */
+
 /* Scroll offset for fixed header */
 section[id] {
   scroll-margin-top: 80px;
@@ -14,8 +16,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent horizontal scroll on all viewports */
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile touch scroll feel */
+.overflow-hidden {
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Form inputs – remove autofill yellow */
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Gallery image aspect ratio stability */
+.gallery-img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Smooth language transition on text elements */
+[x-text] {
+  transition: opacity 0.15s ease;
 }
