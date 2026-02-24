@@ -15,8 +15,8 @@ export const translations = {
         hero_desc: "Un'impresa artigiana svizzera che bilancia calore umano e precisione professionale. Dalla consulenza all'ultimo dettaglio.",
         hero_cta: "Esplora il Protocollo",
 
-        feat_title: "L'Arsenale",
-        feat_title_span: "Tecnico",
+        feat_title: "Servizi",
+        feat_title_span: "Tecnici",
         feat_desc: "Strumenti analitici, macchinari svizzeri di precisione e un protocollo blindato progettati per eliminare ogni approssimazione in cantiere.",
 
         // Shuffler
@@ -116,8 +116,8 @@ export const translations = {
         hero_desc: "Ein Schweizer Handwerksbetrieb, der menschliche Wärme und professionelle Präzision in Einklang bringt. Von der Beratung bis zum letzten Detail.",
         hero_cta: "Protokoll entdecken",
 
-        feat_title: "Das Technische",
-        feat_title_span: "Arsenal",
+        feat_title: "Technische",
+        feat_title_span: "Dienstleistungen",
         feat_desc: "Analytische Instrumente, Schweizer Präzisionsmaschinen und ein gepanzertes Protokoll, entworfen um jede Annäherung auf der Baustelle zu eliminieren.",
 
         // Shuffler
