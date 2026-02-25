@@ -867,6 +867,7 @@ const Contact = () => {
 // FLOATING WHATSAPP
 // ==========================================
 const FloatingWhatsApp = () => {
+  const { t } = useLanguage();
   return (
     <a
       href="https://wa.me/41784044747"
