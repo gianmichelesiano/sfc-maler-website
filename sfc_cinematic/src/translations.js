@@ -1,4 +1,108 @@
 export const translations = {
+    de: {
+        nav_about: "Über Uns",
+        nav_services: "Dienstleistungen",
+        nav_gallery: "Arbeiten",
+        nav_philosophy: "Philosophie",
+        nav_protocol: "Protokoll",
+        nav_contact: "Kontakt",
+        nav_cta: "Kostenloses Angebot",
+        nav_call: "Jetzt anrufen",
+
+        hero_brand: "SFC Maler GmbH",
+        hero_title_1: "PERFEKTIONIEREN SIE IHRE",
+        hero_title_2: "Oberfläche",
+        hero_desc: "Ein Schweizer Handwerksbetrieb, der menschliche Wärme und professionelle Präzision in Einklang bringt. Von der Beratung bis zum letzten Detail.",
+        hero_cta: "Protokoll entdecken",
+
+        feat_title: "Technische",
+        feat_title_span: "Dienstleistungen",
+        feat_desc: "Analytische Instrumente, Schweizer Präzisionsmaschinen und ein gepanzertes Protokoll, entworfen um jede Annäherung auf der Baustelle zu eliminieren.",
+
+        // Shuffler
+        shuffler_title: "Innen- / Aussenmalerei",
+        shuffler_desc: "Ein systematischer Ansatz, um Ihnen das perfekte Ergebnis zu garantieren, Schicht für Schicht.",
+        shuffler_1: "01 / Oberflächenvorbereitung",
+        shuffler_2: "02 / Farbauftrag",
+        shuffler_3: "03 / Präzisionsfinish",
+
+        // Typewriter
+        typewriter_title: "Spritzlackierung",
+        typewriter_live: "Live Feed",
+        typewriter_desc: "Geschwindigkeit und mikrometrische Abdeckung ohne Farbfehler.",
+        typewriter_lines: [
+            "Initialisierung des Spritzsystems...",
+            "Düsendruckkalibrierung... OK.",
+            "Optimale Abdeckung berechnet: 100%.",
+            "Gleichmäßige Abgabe läuft."
+        ],
+
+        // Scheduler
+        scheduler_title: "Gips- & Stukkaturarbeiten",
+        scheduler_desc: "Strenge Trocknungsplanung für makellose Untergründe.",
+        scheduler_days: ["M", "D", "M", "D", "F", "S", "S"],
+        scheduler_notice: "Geplanter Eingriff",
+        scheduler_btn: "Bestätigen",
+
+        // Stats
+        stat_1: "Abgeschlossene Projekte",
+        stat_2: "Jahre Erfahrung",
+        stat_3: "Teammitglieder",
+        stat_4: "Aktive Kunden",
+
+        // About
+        about_label: "Über Uns",
+        about_title_1: "Handwerkliche Erf.,",
+        about_title_2: "Schweizer Präzision.",
+        about_desc: "Salvo Catanese bringt jahrelange Erfahrung und Schweizer Qualitätsstandards in jeden Auftrag ein. Von der Beratung bis zum Eingriff begleiten wir Sie mit Zuverlässigkeit und vollem Respekt für Ihre Umgebung.",
+        about_bullet_1: "Garantierte Qualität in jeder Schicht",
+        about_bullet_2: "Totale Reinigung nach Abschluss",
+        about_bullet_3: "Ausschließliche Verwendung v. Premium-Materialien",
+
+        // Gallery
+        gallery_title: "Unsere Arbeiten",
+        gallery_desc: "Perfekte Strukturen, makellose Ästhetik.",
+
+        // Philosophy
+        phil_label: "Manifest",
+        phil_1: "Die meisten Maler konzentrieren sich auf:",
+        phil_1_strike: "schnelles Abdecken der Wände",
+        phil_2: "Wir konzentrieren uns auf:",
+        phil_2_span: "die Struktur der Oberfläche.",
+
+        // Protocol
+        prot_1_title: "Beratung & Analyse",
+        prot_1_desc: "Technische Inspektion, um den tatsächlichen Zustand des Untergrunds zu verstehen. Keine blinden Schätzungen, nur sichere Daten zur Formulierung des richtigen Ansatzes.",
+        prot_2_title: "Präzisionsausführung",
+        prot_2_desc: "Isolierung der Räume, infinitesimale Vorbereitung des Untergrunds und Anwendung der Produkte gemäß Schweizer Datenblättern.",
+        prot_3_title: "Reinigung & Abnahme",
+        prot_3_desc: "Entfernung aller Baustellenspuren und gemeinsame Qualitätskontrolle vor della Übergabe. Die Baustelle wird wieder zum Zuhause.",
+
+        // Contact
+        contact_title: "Starten Sie das Projekt.",
+        contact_desc: "Planen Sie Ihren Eingriff noch heute mit einer operativen und professionellen Schätzung.",
+        contact_lbl_address: "Adresse",
+        contact_address: "8807 Freienbach, Schweiz",
+        contact_lbl_phone: "Telefon / WhatsApp",
+        contact_wa_link: "WhatsApp-Chat starten \u2192",
+        form_name: "Vollständiger Name",
+        form_name_ph: "Max Muster",
+        form_contact: "E-Mail / Telefon",
+        form_contact_ph: "E-Mail oder Telefonnummer",
+        form_details: "Projektdetails",
+        form_details_ph: "Beschreiben Sie kurz, was Sie benötigen...",
+        form_btn: "Anfrage Senden",
+
+        // Footer
+        foot_desc: "Ihr Malerprofi in der ganzen Schweiz.",
+        foot_imp: "Impressum",
+        foot_priv: "Datenschutz",
+        foot_rights: "© 2026 SFC Maler GmbH.",
+        foot_sys: "System Operational",
+        form_success: "Nachricht erfolgreich gesendet (Mockup).",
+        wa_label: "Kontaktieren Sie uns auf WhatsApp",
+        lang_label: "Sprache"
+    },
     it: {
         nav_about: "Chi Siamo",
         nav_services: "Servizi",
@@ -98,107 +202,9 @@ export const translations = {
         foot_imp: "Impressum",
         foot_priv: "Privacy Policy",
         foot_rights: "© 2026 SFC Maler GmbH.",
-        foot_sys: "System Operational"
-    },
-    de: {
-        nav_about: "Über Uns",
-        nav_services: "Dienstleistungen",
-        nav_gallery: "Arbeiten",
-        nav_philosophy: "Philosophie",
-        nav_protocol: "Protokoll",
-        nav_contact: "Kontakt",
-        nav_cta: "Kostenloses Angebot",
-        nav_call: "Jetzt anrufen",
-
-        hero_brand: "SFC Maler GmbH",
-        hero_title_1: "PERFEKTIONIEREN SIE IHRE",
-        hero_title_2: "Oberfläche",
-        hero_desc: "Ein Schweizer Handwerksbetrieb, der menschliche Wärme und professionelle Präzision in Einklang bringt. Von der Beratung bis zum letzten Detail.",
-        hero_cta: "Protokoll entdecken",
-
-        feat_title: "Technische",
-        feat_title_span: "Dienstleistungen",
-        feat_desc: "Analytische Instrumente, Schweizer Präzisionsmaschinen und ein gepanzertes Protokoll, entworfen um jede Annäherung auf der Baustelle zu eliminieren.",
-
-        // Shuffler
-        shuffler_title: "Innen- / Aussenmalerei",
-        shuffler_desc: "Ein systematischer Ansatz, um Ihnen das perfekte Ergebnis zu garantieren, Schicht für Schicht.",
-        shuffler_1: "01 / Oberflächenvorbereitung",
-        shuffler_2: "02 / Farbauftrag",
-        shuffler_3: "03 / Präzisionsfinish",
-
-        // Typewriter
-        typewriter_title: "Spritzlackierung",
-        typewriter_live: "Live Feed",
-        typewriter_desc: "Geschwindigkeit und mikrometrische Abdeckung ohne Farbfehler.",
-        typewriter_lines: [
-            "Initialisierung des Spritzsystems...",
-            "Düsendruckkalibrierung... OK.",
-            "Optimale Abdeckung berechnet: 100%.",
-            "Gleichmäßige Abgabe läuft."
-        ],
-
-        // Scheduler
-        scheduler_title: "Gips- & Stukkaturarbeiten",
-        scheduler_desc: "Strenge Trocknungsplanung für makellose Untergründe.",
-        scheduler_days: ["M", "D", "M", "D", "F", "S", "S"],
-        scheduler_notice: "Geplanter Eingriff",
-        scheduler_btn: "Bestätigen",
-
-        // Stats
-        stat_1: "Abgeschlossene Projekte",
-        stat_2: "Jahre Erfahrung",
-        stat_3: "Teammitglieder",
-        stat_4: "Aktive Kunden",
-
-        // About
-        about_label: "Über Uns",
-        about_title_1: "Handwerkliche Erf.,",
-        about_title_2: "Schweizer Präzision.",
-        about_desc: "Salvo Catanese bringt jahrelange Erfahrung und Schweizer Qualitätsstandards in jeden Auftrag ein. Von der Beratung bis zum Eingriff begleiten wir Sie mit Zuverlässigkeit und vollem Respekt für Ihre Umgebung.",
-        about_bullet_1: "Garantierte Qualität in jeder Schicht",
-        about_bullet_2: "Totale Reinigung nach Abschluss",
-        about_bullet_3: "Ausschließliche Verwendung v. Premium-Materialien",
-
-        // Gallery
-        gallery_title: "Unsere Arbeiten",
-        gallery_desc: "Perfekte Strukturen, makellose Ästhetik.",
-
-        // Philosophy
-        phil_label: "Manifest",
-        phil_1: "Die meisten Maler konzentrieren sich auf:",
-        phil_1_strike: "schnelles Abdecken der Wände",
-        phil_2: "Wir konzentrieren uns auf:",
-        phil_2_span: "die Struktur der Oberfläche.",
-
-        // Protocol
-        prot_1_title: "Beratung & Analyse",
-        prot_1_desc: "Technische Inspektion, um den tatsächlichen Zustand des Untergrunds zu verstehen. Keine blinden Schätzungen, nur sichere Daten zur Formulierung des richtigen Ansatzes.",
-        prot_2_title: "Präzisionsausführung",
-        prot_2_desc: "Isolierung der Räume, infinitesimale Vorbereitung des Untergrunds und Anwendung der Produkte gemäß Schweizer Datenblättern.",
-        prot_3_title: "Reinigung & Abnahme",
-        prot_3_desc: "Entfernung aller Baustellenspuren und gemeinsame Qualitätskontrolle vor der Übergabe. Die Baustelle wird wieder zum Zuhause.",
-
-        // Contact
-        contact_title: "Starten Sie das Projekt.",
-        contact_desc: "Planen Sie Ihren Eingriff noch heute mit einer operativen und professionellen Schätzung.",
-        contact_lbl_address: "Adresse",
-        contact_address: "8807 Freienbach, Schweiz",
-        contact_lbl_phone: "Telefon / WhatsApp",
-        contact_wa_link: "WhatsApp-Chat starten \u2192",
-        form_name: "Vollständiger Name",
-        form_name_ph: "Max Muster",
-        form_contact: "E-Mail / Telefon",
-        form_contact_ph: "E-Mail oder Telefonnummer",
-        form_details: "Projektdetails",
-        form_details_ph: "Beschreiben Sie kurz, was Sie benötigen...",
-        form_btn: "Anfrage Senden",
-
-        // Footer
-        foot_desc: "Ihr Malerprofi in der ganzen Schweiz.",
-        foot_imp: "Impressum",
-        foot_priv: "Datenschutz",
-        foot_rights: "© 2026 SFC Maler GmbH.",
-        foot_sys: "System Operational"
+        foot_sys: "System Operational",
+        form_success: "Messaggio inviato correttamente (mockup).",
+        wa_label: "Contattaci su WhatsApp",
+        lang_label: "Lingua"
     }
 };
