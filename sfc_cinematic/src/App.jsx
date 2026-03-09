@@ -767,7 +767,24 @@ const About = () => {
 // ==========================================
 const Gallery = () => {
   const { t } = useLanguage();
-  const images = Array.from({ length: 6 }).map((_, i) => `/assets/images/gallery-${i + 1}.jpg`);
+  const images = Array.from({ length: 11 }).map((_, i) => `/assets/images/gallery-${i + 1}.jpg`);
+  const videos = Array.from({ length: 5 }).map((_, i) => `/assets/images/video-${i + 1}.mp4`);
+
+  // Interleave: after every 3 photos, insert a video
+  const items = [];
+  let vIdx = 0;
+  images.forEach((img, i) => {
+    items.push({ type: 'image', src: img, idx: i });
+    if ((i + 1) % 3 === 0 && vIdx < videos.length) {
+      items.push({ type: 'video', src: videos[vIdx], idx: vIdx });
+      vIdx++;
+    }
+  });
+  // Append remaining videos
+  while (vIdx < videos.length) {
+    items.push({ type: 'video', src: videos[vIdx], idx: vIdx });
+    vIdx++;
+  }
 
   return (
     <section id="lavori" className="py-24 bg-calce border-t border-inchiostro/5 relative z-10 px-6 lg:px-12">
@@ -778,15 +795,27 @@ const Gallery = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((src, idx) => (
-            <div key={idx} className="group relative overflow-hidden rounded-[2rem] h-[400px] bg-inchiostro/5">
-              <img
-                src={src}
-                className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
-                alt={`Lavoro ${idx + 1}`}
-                onError={(e) => { e.target.src = `https://images.unsplash.com/photo-1569004456903-88ee14210a4e?q=80&w=800&auto=format&fit=crop&sig=${idx}`; }}
-              />
-              <div className="absolute inset-0 bg-inchiostro/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {items.map((item, i) => (
+            <div key={i} className="group relative overflow-hidden rounded-[2rem] h-[400px] bg-inchiostro/5">
+              {item.type === 'image' ? (
+                <>
+                  <img
+                    src={item.src}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+                    alt={`Lavoro ${item.idx + 1}`}
+                  />
+                  <div className="absolute inset-0 bg-inchiostro/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </>
+              ) : (
+                <video
+                  src={item.src}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              )}
             </div>
           ))}
         </div>
